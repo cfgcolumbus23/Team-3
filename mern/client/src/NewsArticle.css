@@ -1,0 +1,44 @@
+#article-main {
+    margin: 0px;
+    margin-left: 15px;
+    margin-top: 10px;
+    padding: 0px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+#article-metadata {
+    display: block;
+    margin: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0px;
+}
+
+#article-author {
+    display: inline-block;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 10px;
+}
+
+#article-date {
+    display: inline-block;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+#article-title {
+    margin: 0px;
+    padding: 0px;
+    color:black;
+}
+
+#article-content {
+    margin: 0px;
+    padding: 0px;
+    color: rgb(72, 72, 72);
+    line-height: 1.3;
+}
