@@ -1,0 +1,11 @@
+button {
+    color: white;
+}
+CardText {
+    font-family: cursive;
+}
+
+.custom-btn {
+    background-color: blueviolet !important;
+    border: #fff !important;
+}
