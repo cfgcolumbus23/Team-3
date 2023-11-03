@@ -12,7 +12,9 @@
     margin: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0px;
+    font-size: 16px;
 }
 
 #article-author {
@@ -20,7 +22,7 @@
     color: black;
     margin: 0px;
     padding: 0px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #article-date {
@@ -28,6 +30,7 @@
     color: black;
     margin: 0px;
     padding: 0px;
+
 }
 
 #article-title {
@@ -40,5 +43,7 @@
     margin: 0px;
     padding: 0px;
     color: rgb(72, 72, 72);
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
     line-height: 1.3;
 }

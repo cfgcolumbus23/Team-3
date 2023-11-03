@@ -1,4 +1,4 @@
-/*Set the height and width of the news widget to be 300px by 600px*/
+/*Create a rectangular component with curved edges*/
 #news-feed {
     background-color: white;
     max-height: 300px;

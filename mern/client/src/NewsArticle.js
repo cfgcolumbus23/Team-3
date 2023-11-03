@@ -2,13 +2,14 @@ import "./NewsArticle.css"
 
 function NewsArticle() {
     return (
+        // Top-level container holding the article
         <div id="article-main">
                 <h1 id="article-title">
                     Update: Company policy on travel changed
                 </h1>
                 <div id="article-metadata"> 
                     <p id="article-date"> 
-                        November 3, 2023 ·
+                        November 3, 2023 · 
                     </p>
                     <p id="article-author">
                         Rajit Khatri
