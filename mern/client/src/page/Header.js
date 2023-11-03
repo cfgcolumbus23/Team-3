@@ -4,8 +4,9 @@ import React from "react";
 export default function Header() {
   return (
     <div className="header">
-        <h1>Header</h1>
-      
+        {/* Ayushe Type Here! Put your "I am" here*/}
+        <h1>I am</h1>
+
     </div>
   );
 }
