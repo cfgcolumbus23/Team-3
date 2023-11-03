@@ -3,6 +3,7 @@ import React from "react";
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 
 function SimpleContainer() {
   return (
@@ -14,9 +15,13 @@ function SimpleContainer() {
                 Find Your Resources
             </Box>
             <Box sx={{display: 'flex'}}>
-                We believe that everyone has the right to access the tools they need to succeed. 
+                We believe that everyone has the right to access the tools they need to succeed. Whether you're searching for career development workshops, educational materials, financial literacy guidance, or practical support like transportation and clothing for interviews, we've got you covered. 
             </Box>
-            
+            <Box sx={{display: 'flex'}}>
+                <Button variant="contained">Resources</Button>
+            </Box>
+
+
             
         </Box>
       </Container>
