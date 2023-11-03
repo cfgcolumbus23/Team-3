@@ -13,5 +13,7 @@ app.listen(port, () => {
   dbo.connectToServer(function (err) {
     if (err) console.error(err);
    });
+  // console.log(process.env.ATLAS_URI);
   console.log(`Server is running on port: ${port}`);
 });
+

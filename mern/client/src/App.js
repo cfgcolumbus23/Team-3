@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer';
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <Routes>
+      <Route exact path="/" element={<Footer />} />
+      </Routes>
     </div>
   );
 }
