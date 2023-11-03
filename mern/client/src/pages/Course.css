@@ -4,3 +4,13 @@
 .card {
     display: flex;
 }
+.horizontal-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  /* Adjust alignment as needed */
+    transform-origin: 10%;
+  }
+  .course{
+    transform-origin: 10% 10% 0px;
+
+  }
