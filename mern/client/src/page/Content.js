@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
+import resource from "../image/Job-Training.jpg"
+
 function SimpleContainer() {
   return (
     <React.Fragment>
@@ -19,6 +21,9 @@ function SimpleContainer() {
             </Box>
             <Box sx={{display: 'flex'}}>
                 <Button variant="contained">Resources</Button>
+            </Box>
+            <Box sx={{display: 'flex'}}>
+                <img src={resource} width={250} height={250} />
             </Box>
 
 
