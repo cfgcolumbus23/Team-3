@@ -102,8 +102,8 @@ export default function Home() {
             <CardText>
             Goodwill is more than an organization; it's a vibrant community where individuals from all walks of life come together to support each other. Here, you can connect with peers, potential employers, and community leaders who share your commitment to growth and success. 
             </CardText>
-              <Link to="/Connection">
-                <Button color="primary"> Connection  </Button>
+              <Link to="/connect">
+                <Button color="primary"> Connect  </Button>
               </Link>
           </CardBody>
         </Card>
