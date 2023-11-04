@@ -1,6 +1,8 @@
 //import React from "react";
-import "./Collect.css";
+import "./Connect.css";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
 
@@ -8,7 +10,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-  apiKey: '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', // defaults to process.env["OPENAI_API_KEY"]
+  apiKey: 'OPENAI_API_KEY', // defaults to process.env["OPENAI_API_KEY"]
   dangerouslyAllowBrowser: true 
 });
 
@@ -69,21 +71,31 @@ export default function ChatbotComponent() {
             </div>
             <div className="ChatBot Options chatBotOptions">
                 <div className="Buttons">
-                <button className="Courses">
+                <Link to="/Courses">
+                <button className="buttonBlackText">
                     I want to learn about..
                 </button>
-                <button className="Career Coaches">
+                </Link>
+                <Link to="/Mentorship">
+                <button className="buttonBlackText">
                     I need career coaching...
                 </button>
-                <button className="Mentorship">
+                </Link>
+                <Link to="/Mentorship">
+                <button className="buttonBlackText">
                     I want to find someone in the tech industry...
                 </button>
-                <button className="Newsletter">
+                </Link>
+                <Link to="/Resources">
+                <button className="buttonBlackText">
                     I want to know what is happening...
                 </button>
-                <button className="Resources">
+                </Link>
+                <Link to="/Courses">
+                <button className="buttonBlackText">
                     I need help getting my GED...
                 </button>
+                </Link>
                 </div>
             </div>
         </main>  
