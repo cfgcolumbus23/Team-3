@@ -43,7 +43,9 @@ export default function Home() {
             <CardText>
               We believe that everyone has the right to access the tools they need to succeed. Whether you're searching for career development workshops, educational materials, financial literacy guidance, or practical support like transportation and clothing for interviews, we've got you covered. 
             </CardText>
-            <Button color="primary"> Resources  </Button>
+            <Link to="/Resources">
+              <Button color="primary"> Resources  </Button>
+            </Link>
           </CardBody>
         </Card>
         <Card className="my-2">
@@ -99,7 +101,9 @@ export default function Home() {
             <CardText>
             Goodwill is more than an organization; it's a vibrant community where individuals from all walks of life come together to support each other. Here, you can connect with peers, potential employers, and community leaders who share your commitment to growth and success. 
             </CardText>
-            <Button color="primary"> Connection  </Button>
+              <Link to="/Connection">
+                <Button color="primary"> Connection  </Button>
+              </Link>
           </CardBody>
         </Card>
         <Card>
