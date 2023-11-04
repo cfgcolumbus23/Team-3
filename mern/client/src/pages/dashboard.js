@@ -1,5 +1,7 @@
 import { jwtDecode } from "jwt-decode";
 import { useState, useEffect } from 'react'
+import Emojis from '../components/emojis.js'
+import Header from '../components/Header.js'
 
 const Dashboard = () => {
     if (!localStorage.getItem('user')){
@@ -17,6 +19,20 @@ const Dashboard = () => {
         const ret = await fetch('/api/phone/push?message=' + message);
         console.log(ret)
     }
+    const [ratings, setRatings] = useState(null);
+    const fetchRatings = async () => {
+        const response = await fetch('/api/ratings/getAllRatings');
+        const json = await response.json();
+        
+        if (response.ok) {
+          setRatings(json);
+        }
+      };
+    
+      useEffect(() => {
+        fetchRatings(); // Fetch ratings data initially
+      }, []);
+      console.log(ratings)
     return (
         <div>
         <h3>Hi {user.username}! Welcome to the Dashboard.</h3>
@@ -27,6 +43,7 @@ const Dashboard = () => {
             
             <button>Submit</button>
         </form>
+        <Emojis ratings={ratings} />        
         </div>
     )
 }
