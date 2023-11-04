@@ -7,13 +7,13 @@ import Resources from "./pages/mentorship"
 import Mentorship from "./pages/mentorship"
 import Login from "./pages/Login"
 import Signup from './pages/Signup';
-import NewsFeed from './NewsFeed.js'
+import NewsFeed from './pages/NewsFeed'
 import Dashboard from './pages/dashboard'
 //import Mentorship from "./pages/Mentorship.js"
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet, Link,  BrowserRouter} from "react-router-dom";
-import Collect from './pages/Collect';
+import Connect from './pages/Connect';
 import NewsArticlePage from './pages/NewsArticlePage.js';
 
 
@@ -34,6 +34,7 @@ function App() {
                   <Route path = "/dashboard" element = {<Dashboard />}/>
                   <Route path = "/more" element = {<NewsArticlePage/>}exact/>
                   <Route path = "/newsfeed" element = {<NewsFeed/>} />
+                  <Route path = "/connect" element = {<Connect/>} />
                 </Routes>
               </div>
             <Footer />
