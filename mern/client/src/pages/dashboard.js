@@ -51,17 +51,13 @@ const Dashboard = () => {
         const [calendarEvent, setCalendarEvent] = useState(null)
         const [calendarEventDate, setCalendarEventDate] = useState(null)
 
-        const handleCalendarSubmit = async() => {
-
-            const ret = await fetch('/api/events/addEvent?event=' + calendarEvent + "&date=" + calendarEventDate);
+        async function  handleCalendarSubmit (event){
+            event.preventDefault()
+            const ret = await fetch('/api/events/addEvent?title=' + calendarEvent + "&date=" + String(calendarEventDate));
             
             console.log(ret)
         }
-        console.log('/api/events/addEvent?event=' + calendarEvent + "&date=" + calendarEventDate)
-        console.log(calendarEvent)
-        console.log(calendarEvent)
-        console.log(calendarEvent)
-        console.log(calendarEventDate)
+        
     return (
         <div>
         <br></br>
@@ -73,7 +69,7 @@ const Dashboard = () => {
             
             <button>Submit</button>
         </form>
-        <form className = "addCalendarEvent" onSubmit={handleCalendarSubmit}>
+        <form id = "addCalendarEvent" onSubmit={(e) => handleCalendarSubmit(e)}>
             <h4>Add Events to the Calendar!</h4>
             <label>Event Name</label>
             <input type = "text" onChange={(e) => setCalendarEvent(e.target.value)}/>
@@ -82,6 +78,7 @@ const Dashboard = () => {
             
             <button>Submit</button>
         </form>
+       
         <br></br>
         <h3>SMS Responses:</h3>
         <div id ="commentsdiv">
