@@ -29,7 +29,7 @@ const Emoji = ({ type, count }) => {
 
 const Emojis = ({ ratings }) => {
   return (
-    <div className="emojis">
+    <div className="emojis-container">
       {ratings &&
         ratings.map((rating) => (
           <div key={rating.page} className="rating-item">
