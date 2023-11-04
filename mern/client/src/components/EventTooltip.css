@@ -1,13 +1,13 @@
 /* Calendar Tooltip Styles */
 .event-tooltip {
-    position: fixed;
+    position: absolute;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-    max-width: 300px; /* Adjust as needed */
+    max-width: 300px; 
   }
   
   .event-tooltip h3 {
@@ -31,8 +31,6 @@
   .close-button img {
     width: 20px; /* Adjust the size of the close button icon */
   }
-  
-  /* Optional: Add transition for a smoother tooltip appearance */
   .event-tooltip {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;

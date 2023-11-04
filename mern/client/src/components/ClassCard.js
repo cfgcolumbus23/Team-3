@@ -1,5 +1,5 @@
 import { 
-  Card, CardBody, CardImg, 
+  Card, CardBody, 
   CardTitle, CardText, Button
 } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'; 

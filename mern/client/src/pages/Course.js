@@ -76,7 +76,8 @@ These services are offered to the public at no-cost at various Goodwill Columbus
                 about={item.about}
                 requirements={items.requirements}
                 schedule ={items.schedule}
-              />
+                />
+                console.log(schedule);
               </CardGroup> 
               </span>  
              </td> 

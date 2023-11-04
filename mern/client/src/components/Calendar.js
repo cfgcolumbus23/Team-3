@@ -32,10 +32,14 @@ class CourseCalendar extends Component {
   };
 
   handleEventClick = (event, e) => {
-    // Calculate the position of the tooltip
+    window.scrollBy(0,50)
+    // Calculate the position relative to the calendar container
+    const calendarContainer = document.querySelector(".CourseCalendar"); 
+    const calendarRect = calendarContainer.getBoundingClientRect();
+
     const position = {
-      top: e.clientY,
-      left: e.clientX,
+      top: e.clientY - calendarRect.top - 10,
+      left: e.clientX - calendarRect.left -10,
     };
 
     this.setState({
@@ -43,6 +47,8 @@ class CourseCalendar extends Component {
       tooltipPosition: position,
       selectedEvent: event,
     });
+    
+
   };
 
   handleCloseTooltip = () => {
