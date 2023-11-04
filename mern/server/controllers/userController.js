@@ -1,5 +1,4 @@
-const express = require('express')
-
+const User = require('../models/userModel')
 
 //login user
 const loginUser = async (req, res) => {
@@ -10,7 +9,13 @@ const loginUser = async (req, res) => {
 
 //signup user
 const signupUser = async (req, res) => {
-    res.json({mssg: 'signup user'})
+    const {username, password} = req.body
+    try {
+        const user = await User.signup(username, password)
+        res.status(200).json({username, user})
+    } catch(error){
+        res.status(400).json({error: error.message})
+    }
 }
 
 
