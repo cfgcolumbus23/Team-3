@@ -3,6 +3,8 @@ import smile from '../smile.svg';
 import neutral from '../neutral.svg';
 import frown from '../frown.svg';
 import { useLocation } from 'react-router-dom';
+import "./footer.css";
+
 
 // className="App-footer"
 const Footer = () => {
@@ -30,6 +32,7 @@ const Footer = () => {
 
   return (
     <footer className="App-footer">
+      <div className="emojis">
       <div>
         <img src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
         {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}
@@ -41,6 +44,7 @@ const Footer = () => {
       <div>
         <img src={frown} alt="frown" onClick={() => handleClick('numFrown')} />
         {ratings && ratings.numFrown && <p>{ratings.numFrown}</p>}
+      </div>
       </div>
     </footer>
   );
