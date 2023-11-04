@@ -1,5 +1,6 @@
 const express = require('express')
 const getRatingsRoutes = require('./routes/getRatings')
+const getArticleRoutes = require('./routes/articles')
 const mongoose = require('mongoose')
 //express app
 const app = express()
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
   res.json({mssg: "Welcome to the app"})
 })
 app.use('/api/ratings', getRatingsRoutes)
+app.use('/api/articles', getArticleRoutes)
 
 // connect to db
 mongoose.connect(process.env.ATLAS_URI).then(() => {

@@ -30,6 +30,7 @@ const Footer = () => {
       <div>
         <img src={smile} alt = "smile" onClick={() =>
         console.log("HI")
+        
         }/>
         
         {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}
