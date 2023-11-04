@@ -8,7 +8,10 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 //import Button from '@mui/material/Button';
 
+//Images
 import resource from "../image/Job-Training.jpg"
+import mentorship from "../image/Mentorship.jpeg"
+
 
 function SimpleContainer() {
   return (
@@ -44,19 +47,14 @@ function SimpleContainer() {
 export default function Home() {
   return (
     <div className="home">
-      <CardGroup>
-        <Card className="Resources">
+      <CardGroup className="Resources">
+        <Card>
           <CardBody>
             <CardTitle tag="h5" >
               Find Your Resources
             </CardTitle>
             <CardText>
               We believe that everyone has the right to access the tools they need to succeed. Whether you're searching for career development workshops, educational materials, financial literacy guidance, or practical support like transportation and clothing for interviews, we've got you covered. 
-            </CardText>
-            <CardText>
-              {/* <small className="text-muted">
-                Resources
-              </small> */}
             </CardText>
             <Button color="primary"> Resources  </Button>
           </CardBody>
@@ -67,28 +65,21 @@ export default function Home() {
         </Card>
 
       </CardGroup>
-      <CardGroup>
-        <Card className="Mentorship">
+      <CardGroup className="Mentorship">
+        <Card>
           <CardBody>
             <CardTitle tag="h5" >
               Find Your Mentorship
             </CardTitle>
             <CardText>
-              We believe that everyone has the right to access the tools they need to succeed. Whether you're searching for career development workshops, educational materials, financial literacy guidance, or practical support like transportation and clothing for interviews, we've got you covered. 
-            </CardText>
-            <CardText>
-              {/* <small className="text-muted">
-                Resources
-              </small> */}
+              Mentorship can light the way to personal and professional growth. Our mentorship program is rooted in the spirit of community and collaboration, offering one-on-one guidance, support, and encouragement.
             </CardText>
             <Button color="primary"> Mentorship  </Button>
           </CardBody>
-          
         </Card>
-        <Card className="my-2">
-          <img src={resource} width={250} height={250} />
+        <Card>
+          <img src={mentorship} width={275}/>
         </Card>
-
       </CardGroup>
       
 
