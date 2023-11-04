@@ -14,6 +14,14 @@ router.get("/getRatings", async (req, res) => {
         res.status(400).json({error: error.message})
     }
 })
+router.get("/getAllRatings", async (req, res) => {
+    try {
+        const ratings = await pageRating.find().exec();
+        res.status(200).json(ratings)
+    } catch (error){
+        res.status(400).json({error: error.message})
+    }
+})
 router.get("/updateRatings", async (req, res) => {
     const { emotion, page } = req.query;
     try {

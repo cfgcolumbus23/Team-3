@@ -12,10 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useLogout } from '../hooks/useLogout'
 
-
-const pages = ['Resources', 'Courses', 'Mentorship', 'Connect'];
+const pages = ['resources', 'courses', 'mentorship', 'connect', 'login', 'signup', 'dashboard'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveNavBar() {
@@ -36,12 +36,22 @@ function ResponsiveNavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const { logout } = useLogout()
+  const handleClick = () => {
+    logout()
+    window.location.href = '/';
+  }
+  const isUserLoggedIn = !!localStorage.getItem('user');
 
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <div><img className="logo" alt="Goodwill Logo" src="https://www.goodwillcolumbus.org/wp-content/uploads/2022/05/GWC_Logo_White.svg"/></div>
+          <div>
+            <Link to="/">
+              <img className="logo" alt="Goodwill Logo" src="https://www.goodwillcolumbus.org/wp-content/uploads/2022/05/GWC_Logo_White.svg"/>
+            </Link>
+          </div>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -98,13 +108,15 @@ function ResponsiveNavBar() {
         </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+              <Link to={"/" + page}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
 
@@ -136,6 +148,14 @@ function ResponsiveNavBar() {
                 </MenuItem>
               ))}
             </Menu>
+            {isUserLoggedIn && (
+          <div>
+            <button id="logoutButton" onClick={handleClick}>
+              Log Out
+            </button>
+          </div>
+        )}
+            
           </Box>
         </Toolbar>
       </Container>
