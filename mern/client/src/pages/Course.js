@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState } from "react";
 import Header from '../components/Header.js'
 import ClassCard from '../components/ClassCard'; // Import the ClassCard component
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -61,7 +61,6 @@ const Course = () => {
   ];
   return (
     <div class= "course">
-      <Header />
       <h1>Courses</h1>
       <p>From 1-on-1 career coaching to job credentials to digital literacy, our free job training programs are open to all.
 These services are offered to the public at no-cost at various Goodwill Columbus job training centers and are focused on preparing individuals for in-demand jobs in the information technology, healthcare, hospitality, and logistics industries.</p>
@@ -77,7 +76,6 @@ These services are offered to the public at no-cost at various Goodwill Columbus
                 requirements={items.requirements}
                 schedule ={items.schedule}
                 />
-                console.log(schedule);
               </CardGroup> 
               </span>  
              </td> 

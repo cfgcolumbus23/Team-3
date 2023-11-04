@@ -18,3 +18,10 @@ img, svg {
     margin-right: auto;
 }
 
+.type-animation {
+    text-align: center;
+    padding: 10px;
+    font-size: 45px;
+    padding-bottom: 20px;
+}
+

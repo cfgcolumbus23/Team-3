@@ -53,3 +53,9 @@ CardText {
     margin-left: auto;
     margin-right: auto;
 }
+h5{
+    text-align: center;
+}
+.card-title{
+    text-align: center;
+}

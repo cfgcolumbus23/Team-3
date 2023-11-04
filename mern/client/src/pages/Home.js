@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CardGroup, Card, CardBody, CardTitle, CardText, Button } from 'reactstrap';
+import { TypeAnimation } from 'react-type-animation';
 //import "./Header.css";
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -17,6 +18,22 @@ import connection from "../image/connection.jpeg"
 export default function Home() {
   return (
     <div className="home">
+      <div className = "type-animation">
+      <TypeAnimation
+        sequence={[
+          "You're Powerful",
+          1000,
+          "You're Intelligent",
+          1000,
+          "You're Creative",
+          1000,
+        ]}
+        speed={20}
+        repeat={Infinity}
+        style={{ fontSize: '2em' }}
+      />
+    </div>
+
       <CardGroup className="Resources">
         <Card>
           <CardBody>
@@ -26,7 +43,9 @@ export default function Home() {
             <CardText>
               We believe that everyone has the right to access the tools they need to succeed. Whether you're searching for career development workshops, educational materials, financial literacy guidance, or practical support like transportation and clothing for interviews, we've got you covered. 
             </CardText>
-            <Button color="primary"> Resources  </Button>
+            <Link to="/Resources">
+              <Button color="primary"> Resources  </Button>
+            </Link>
           </CardBody>
         </Card>
         <Card className="my-2">
@@ -82,7 +101,9 @@ export default function Home() {
             <CardText>
             Goodwill is more than an organization; it's a vibrant community where individuals from all walks of life come together to support each other. Here, you can connect with peers, potential employers, and community leaders who share your commitment to growth and success. 
             </CardText>
-            <Button color="primary"> Connection  </Button>
+              <Link to="/Connection">
+                <Button color="primary"> Connection  </Button>
+              </Link>
           </CardBody>
         </Card>
         <Card>
