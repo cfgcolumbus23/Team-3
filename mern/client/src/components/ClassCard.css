@@ -8,6 +8,7 @@ CardText {
 .custom-btn {
     background-color: rgb(22, 77, 171) !important;
     border: #fff !important;
+    justify-content: center;
 }
 
 .custom-card {

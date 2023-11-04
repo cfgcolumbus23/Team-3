@@ -2,11 +2,15 @@ Card {
     color: "light";
 }
 .card-body {
-    width: 100%;
-    flex: 1 1 auto;
-    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-    color: var(--bs-card-color);
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* You can adjust the alignment as needed */
+    margin: 0 -10px; /* Adjust the margin to create spacing between cards */
+    }
+.card-group {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each card as needed, with margin included */
+    margin: 10px; /* Create spacing between cards */
+    }
 img, svg {
     border-radius: 8px;
     
