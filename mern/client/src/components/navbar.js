@@ -39,7 +39,10 @@ function ResponsiveNavBar() {
   const { logout } = useLogout()
   const handleClick = () => {
     logout()
+    window.location.href = '/';
   }
+  const isUserLoggedIn = !!localStorage.getItem('user');
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -139,9 +142,14 @@ function ResponsiveNavBar() {
                 </MenuItem>
               ))}
             </Menu>
-            <div>
-              <button onClick={handleClick}>Log Out</button>
-            </div>
+            {isUserLoggedIn && (
+          <div>
+            <button id="logoutButton" onClick={handleClick}>
+              Log Out
+            </button>
+          </div>
+        )}
+            
           </Box>
         </Toolbar>
       </Container>
