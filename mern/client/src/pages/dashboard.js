@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Emojis from '../components/emojis.js'
 import Header from '../components/Header.js'
 import Comment from '../components/comment.js'
+import './dashboard.css'
 const Dashboard = () => {
     if (!localStorage.getItem('user')){
         window.location.href = '/';
@@ -60,9 +61,11 @@ const Dashboard = () => {
         </form>
         <br></br>
         <h3>SMS Responses:</h3>
+        <div id ="commentsdiv">
         {comments && comments.map((comment) => (
         <Comment key={comment.id} comment={comment} />
         ))}
+        </div>
         <Emojis ratings={ratings} />        
         </div>
     )

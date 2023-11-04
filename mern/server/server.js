@@ -24,6 +24,7 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
   res.json({mssg: "Welcome to the app"})
 })
+app.get('/webhook')
 app.use('/api/ratings', getRatingsRoutes)
 app.use('/api/articles', getArticleRoutes)
 app.use('/api/user', userRoutes)

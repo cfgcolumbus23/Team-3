@@ -3,7 +3,6 @@
     border: 1px solid #ccc; /* Border color and thickness */
     margin-bottom: 10px; /* Spacing between comments */
     padding: 10px; /* Padding inside each comment */
-    position: absolute; /* Set position to relative */
   }
   
   .comment h4,
