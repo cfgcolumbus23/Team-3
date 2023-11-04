@@ -53,6 +53,8 @@
 }
 
 .image {
-    max-width: 100%;
+    float: center;
+    width: 80%;
+    object-fit: cover;
     margin-bottom: 15px;
 }

@@ -4,6 +4,7 @@ import Footer from './components/footer';
 import Home from "./pages/Home.js";
 import Login from "./pages/Login"
 import Signup from './pages/Signup';
+import NewsFeed from './NewsFeed.js'
 
 //import Mentorship from "./pages/Mentorship.js"
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
@@ -39,6 +40,7 @@ function App() {
                 />
                 </Routes>
               </div>
+              <NewsFeed/>
             <Footer />
 
           </div>

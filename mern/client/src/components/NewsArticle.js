@@ -1,4 +1,4 @@
-import "./NewsArticle.css"
+import "./../NewsArticle.css"
 import {useEffect, useState} from 'react'
 
 // Formats the date in the database into mm/dd/yyyy format
@@ -53,7 +53,7 @@ function NewsArticle() {
                         {article.author}
                     </p>
                 </div>
-                <img class="image" src="https://www.shutterstock.com/shutterstock/photos/2262759289/display_1500/stock-photo-happy-business-colleagues-having-discussion-over-tablet-pc-2262759289.jpg"></img>
+                <img class="image" src={article.imageURL}></img>
                 <p class="article-content"> 
                     {article.content}
                 </p>
