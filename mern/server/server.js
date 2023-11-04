@@ -1,6 +1,9 @@
 const express = require('express')
+
+//ROUTES
 const getRatingsRoutes = require('./routes/getRatings')
 const getArticleRoutes = require('./routes/articles')
+const userRoutes = require('./routes/user')
 const mongoose = require('mongoose')
 //express app
 const app = express()
@@ -21,6 +24,8 @@ app.get('/', (req, res) => {
 })
 app.use('/api/ratings', getRatingsRoutes)
 app.use('/api/articles', getArticleRoutes)
+app.use('/api/user', userRoutes)
+
 
 // connect to db
 mongoose.connect(process.env.ATLAS_URI).then(() => {
