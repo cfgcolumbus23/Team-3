@@ -1,5 +1,5 @@
 .containerBox{
-    height: 650px;
+    height: 460px;
     width: 450px;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 25px;
@@ -36,13 +36,13 @@
 }
 
 .Buttons {
-    height: 30px;
-    min-width: 40px;
+    height: 122px; 
+    min-width: 52px; 
     text-align: center;
     border-radius: 40px;
     -webkit-box-pack: center;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: -110px;
     position: relative;
     clear: both;
     line-height: 18px;
@@ -50,7 +50,6 @@
     align-items: center;
     color: rgb(65, 143, 238);
     background-color: rgb(255, 255, 255);
-    display: inline-flex;
     width: auto;
     margin-right: 4px;
     transition: opacity 0.3s ease 0s;
@@ -89,4 +88,15 @@
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Feedback Button{
+    text-align: center;
+    height: 30px; 
+    color: rgb(65, 143, 238);
+    background-color: rgb(255, 255, 255);
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    margin-bottom: 89px;
+    margin-right: 40px;
 }

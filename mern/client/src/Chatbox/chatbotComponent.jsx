@@ -2,6 +2,7 @@
 import "./chatbot.css";
 import React, { useState, useEffect } from "react";
 import "./chatbot.css";
+import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
 
 //import { MainContainer, , MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
@@ -64,24 +65,25 @@ export default function ChatbotComponent() {
             <div className="ChatBot Options chatBotOptions">
                 <div className="Buttons">
                 <button className="Courses">
-                    Courses
+                    I want to learn about..
                 </button>
                 <button className="Career Coaches">
-                    Career Coaches
+                    I need career coaching...
                 </button>
                 <button className="Mentorship">
-                    Mentorship
+                    I want to find someone in the tech industry...
                 </button>
                 <button className="Newsletter">
-                    Newsletter
+                    I want to know what is happening...
                 </button>
                 <button className="Resources">
-                    Resources
+                    I need help getting my GED...
                 </button>
                 </div>
             </div>
         </main>  
         <footer className="Footer">
+          <MainContainer>
         <ChatContainer>
           <MessageList>
             {messages.map((message, index) => (
@@ -102,7 +104,13 @@ export default function ChatbotComponent() {
             placeholder="Type your question here..."
               />}
         </ChatContainer>
+        </MainContainer>
         </footer>  
+        <div className="Feedback Button">
+            <button className="Feedback">
+                Feedback
+            </button>
+        </div>
     </div>
   );
 }
