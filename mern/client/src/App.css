@@ -13,6 +13,12 @@
   }
 }
 
+.logo {
+  max-width: 200px;
+  max-height: 200px;
+  margin-right: 50px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

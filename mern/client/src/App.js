@@ -1,13 +1,13 @@
-import Home from './pages/Home'
-
-//import logo from './logo.svg';
 import './App.css';
+import Footer from './components/footer';
+import { Route, Routes } from "react-router-dom";
+import ResponsiveNavBar from "./common/navbar.js";
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-     
+    <div>
+      <ResponsiveNavBar />
+      <Footer />
     </div>
   );
 }
