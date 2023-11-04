@@ -4,6 +4,7 @@ import {
 } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './ClassCard.css';
+import Popup from 'reactjs-popup';
 function ClassCard({name, description, about, requirements, schedule}) {
  function expandButton(){
 
@@ -19,7 +20,9 @@ return (
               <CardText> {about} </CardText> 
               <CardText> {requirements} </CardText> 
               <CardText> {schedule} </CardText> 
-              <Button className="custom-btn" onClick={expandButton}>Learn More!</Button> 
+              <Popup trigger={<Button className="custom-btn" >Learn More!</Button> } modal>  
+              {close => <span> <Button onClick={close}>close</Button> {name} {description} {about} {requirements} {schedule} </span>}
+              </Popup>
           </CardBody> 
       </Card> 
   </div> 

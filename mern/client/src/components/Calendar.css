@@ -1,0 +1,10 @@
+.custom-date-style {
+    color: #a6a6a6;
+    background-color: #3F51B5;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
