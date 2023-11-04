@@ -3,12 +3,28 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./Calendar.css";
-import fawindowclose from "../assets/rectangle-xmark-regular.svg";
-
-const localizer = momentLocalizer(moment);
+import EventTooltip from "./EventTooltip"; // Import the EventTooltip component
 
 const CourseCalendar = () => {
   const [events, setEvents] = useState([]);
+  const [tooltipEvent, setTooltipEvent] = useState(null);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [tooltipPosition, setTooltipPosition] = useState({ top: 0, left: 0 });
+  const localizer = momentLocalizer(moment);
+  const handleEventClick = (event, e) => {
+    const position = {
+      top: e.clientY - 10,
+      left: e.clientX - 10,
+    };
+
+    setTooltipEvent(event);
+    setShowTooltip(true);
+    setTooltipPosition(position);
+  };
+
+  const handleCloseTooltip = () => {
+    setShowTooltip(false);
+  };
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -49,6 +65,19 @@ const CourseCalendar = () => {
         defaultView="month"
         events={events}
         style={{ height: "100vh" }}
+        onSelectEvent={handleEventClick}
+        tooltipAccessor={() => (
+          showTooltip && (
+            <EventTooltip
+              event={tooltipEvent}
+              onClose={handleCloseTooltip}
+              style={{
+                top: tooltipPosition.top,
+                left: tooltipPosition.left,
+              }}
+            />
+          )
+        )}
       />
     </div>
   );

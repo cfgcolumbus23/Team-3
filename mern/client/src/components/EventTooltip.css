@@ -1,0 +1,42 @@
+/* Calendar Tooltip Styles */
+.event-tooltip {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 300px; 
+  }
+  
+  .event-tooltip h3 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .event-tooltip p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  .close-button img {
+    width: 20px; /* Adjust the size of the close button icon */
+  }
+  .event-tooltip {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .event-tooltip.show {
+    opacity: 1;
+  }
+  
