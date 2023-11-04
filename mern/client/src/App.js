@@ -7,7 +7,6 @@ function App() {
     <>
        <BrowserRouter>
         <ResponsiveNavBar />
-
         <div className="pages">
           <Switch>
             <Route exact path="/" component={Home} />
