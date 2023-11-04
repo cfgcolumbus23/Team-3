@@ -36,7 +36,7 @@
 .article-title {
     margin: 0px;
     padding: 0px;
-    color: #3168a0;
+    color: #2e6297;
     font-size: 35px;
 }
 
@@ -57,4 +57,13 @@
     width: 80%;
     object-fit: cover;
     margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
 }

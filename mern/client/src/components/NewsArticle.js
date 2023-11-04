@@ -1,5 +1,6 @@
 import "./../NewsArticle.css"
 import {useEffect, useState} from 'react'
+import { useNavigate } from "react-router-dom"
 
 // Formats the date in the database into mm/dd/yyyy format
 function parseDatearticle(d) {
@@ -37,13 +38,15 @@ function NewsArticle() {
         fetchArticles();
     }, []);
 
+    const navigate = useNavigate();
+
     return (
          <div>  
             {console.log(news_articles)}  
             {news_articles && news_articles.map((article) => (
             <div class="article-main">
                 <h1 class="article-title">
-                    {article.title}
+                    <a onClick={() => navigate("/more", {state: {title: article.title, date: article.date, author: article.author, imgsrc: article.imageURL, content:article.content}})}> {article.title} </a>
                 </h1>
                 <div class="article-metadata"> 
                     <p class="article-date"> 

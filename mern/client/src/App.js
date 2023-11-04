@@ -10,6 +10,7 @@ import NewsFeed from './NewsFeed.js'
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet, Link,  BrowserRouter} from "react-router-dom";
+import NewsArticlePage from './pages/NewsArticlePage.js';
 
 function App() {
   return (
@@ -38,9 +39,10 @@ function App() {
                 />
                 <Route path = "/signup" element = {<Signup/>}
                 />
+                <Route path ="/more" element = {<NewsArticlePage/>}exact/>
+                <Route path="/newsfeed" element = {<NewsFeed/>} />
                 </Routes>
               </div>
-              <NewsFeed/>
             <Footer />
 
           </div>
