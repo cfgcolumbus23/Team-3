@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 import { useLogout } from '../hooks/useLogout'
 
-const pages = ['Resources', 'Courses', 'Mentorship', 'Connect', 'Login', 'Signup'];
+const pages = ['resources', 'courses', 'mentorship', 'connect', 'login', 'signup'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveNavBar() {
@@ -39,7 +39,10 @@ function ResponsiveNavBar() {
   const { logout } = useLogout()
   const handleClick = () => {
     logout()
+    window.location.href = '/';
   }
+  const isUserLoggedIn = !!localStorage.getItem('user');
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -145,9 +148,14 @@ function ResponsiveNavBar() {
                 </MenuItem>
               ))}
             </Menu>
-            <div>
-              <button onClick={handleClick}>Log Out</button>
-            </div>
+            {isUserLoggedIn && (
+          <div>
+            <button id="logoutButton" onClick={handleClick}>
+              Log Out
+            </button>
+          </div>
+        )}
+            
           </Box>
         </Toolbar>
       </Container>

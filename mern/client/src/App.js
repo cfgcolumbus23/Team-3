@@ -7,7 +7,8 @@ import Resources from "./pages/mentorship"
 import Mentorship from "./pages/mentorship"
 import Login from "./pages/Login"
 import Signup from './pages/Signup';
-
+import Dashboard from './pages/dashboard'
+//import Mentorship from "./pages/Mentorship.js"
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet, Link,  BrowserRouter} from "react-router-dom";
@@ -27,6 +28,7 @@ function App() {
                   <Route path = "/mentorship" element = {<Mentorship />} />
                   <Route path = "/login" element = {<Login />} />
                   <Route path = "/signup" element = {<Signup/>} />
+                  <Route path = "/dashboard" element = {<Dashboard />}/>
                 </Routes>
               </div>
             <Footer />
