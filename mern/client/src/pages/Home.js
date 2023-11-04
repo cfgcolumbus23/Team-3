@@ -10,7 +10,8 @@ import Container from '@mui/material/Container';
 
 //Images
 import resource from "../image/Job-Training.jpg"
-import mentorship from "../image/Mentorship.jpeg"
+import mentorship from "../image/mentorship.jpg"
+import connection from "../image/connection.jpeg"
 
 
 function SimpleContainer() {
@@ -65,6 +66,7 @@ export default function Home() {
         </Card>
 
       </CardGroup>
+
       <CardGroup className="Mentorship">
         <Card>
           <CardBody>
@@ -72,13 +74,30 @@ export default function Home() {
               Find Your Mentorship
             </CardTitle>
             <CardText>
-              Mentorship can light the way to personal and professional growth. Our mentorship program is rooted in the spirit of community and collaboration, offering one-on-one guidance, support, and encouragement.
+              Mentorship can light the way to personal and professional growth. Our mentorship program is rooted in the spirit of community and collaboration, offering one-on-one guidance, support, and encouragement. Whether you're taking your first steps into a new career, looking to level up in your current field, or seeking advice on how to navigate the challenges of the workforce, our mentors are here to guide you.
             </CardText>
             <Button color="primary"> Mentorship  </Button>
           </CardBody>
         </Card>
         <Card>
-          <img src={mentorship} width={275}/>
+          <img src={mentorship} width={275} />
+        </Card>
+      </CardGroup>
+
+      <CardGroup className="Connection">
+        <Card>
+          <CardBody>
+            <CardTitle tag="h5" >
+              Find Your Connection
+            </CardTitle>
+            <CardText>
+            Goodwill is more than an organization; it's a vibrant community where individuals from all walks of life come together to support each other. Here, you can connect with peers, potential employers, and community leaders who share your commitment to growth and success. 
+            </CardText>
+            <Button color="primary"> Connection  </Button>
+          </CardBody>
+        </Card>
+        <Card>
+          <img src={connection} width={275}/>
         </Card>
       </CardGroup>
       
