@@ -7,12 +7,12 @@ import Button from '@mui/material/Button';
 
 import resource from "../image/Job-Training.jpg"
 
-function SimpleContainer() {
+
+export default function Home() {
   return (
-    <div>
-      {/* Ayushe Type Here! Put your "I am" here*/}
-      <h1>I am</h1>
-      <React.Fragment>
+
+        <>
+            <div className="home">
         <CssBaseline />
         <Container maxWidth="false">
           <Box sx={{ bgcolor: '#cfe8fc', height: '40vh' }}>
@@ -33,24 +33,7 @@ function SimpleContainer() {
               
           </Box>
         </Container>
-      </React.Fragment>
-    </div>
-  );
-}
-
-
-export default function Home() {
-  return (
-    <div className="home">
-        {SimpleContainer()}
-        {/* <h1>Find Your Resources</h1>
-        <h2>Get access to our newsletter</h2>
-        <h1>Find Your Education</h1>
-
-        <h1>Find Your Mentorship</h1>
-
-        <h1>Find Your Connection</h1> */}
-
-    </div>
+        </div>
+      </>
   );
 }
