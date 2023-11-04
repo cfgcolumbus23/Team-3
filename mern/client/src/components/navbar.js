@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 
-const pages = ['Resources', 'Courses', 'Mentorship', 'Connect'];
+const pages = ['Resources', 'Courses', 'Mentorship', 'Connect', 'Login', 'Signup'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveNavBar() {

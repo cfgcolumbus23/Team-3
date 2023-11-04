@@ -22,7 +22,9 @@ const userSchema = new Schema({
 //need to add list of users who should have admin to true
 userSchema.statics.signup = async function(username, password){
     const exists = await this.findOne({ username })
-
+    if (!username || !password){
+        throw Error("can't have empty fields")
+    }
     if (exists) {
         throw Error("user not unique")
     }
@@ -32,6 +34,23 @@ userSchema.statics.signup = async function(username, password){
 
     const user = await this.create({ username, password: hash, isAdmin: false})
 
+    return user
+}
+
+//login method
+userSchema.statics.login = async function(username, password){
+    if (!username || !password){
+        throw Error("can't have empty fields")
+    }
+    const user = await this.findOne({ username })
+    if (!user) {
+        throw Error("user not found")
+    }
+    const match = await bcrypt.compare(password, user.password)
+
+    if (!match){
+        throw Error("wrong password")
+    }
     return user
 }
 
