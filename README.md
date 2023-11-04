@@ -21,7 +21,8 @@ PAGES
 Main
 <img width="1509" alt="Main" src="https://github.com/cfgcolumbus23/Team-3/assets/66522256/0448c3fc-2ea4-44e6-8f65-b401de37a398">
 
-Resources
+Resources!
+[Screenshot 2023-11-04 110026](https://github.com/cfgcolumbus23/Team-3/assets/47947387/ef046322-ccc4-4ed1-bc99-8a1eafdf420d)
 
 Courses
 <img width="1512" alt="Courses" src="https://github.com/cfgcolumbus23/Team-3/assets/66522256/8c1d43ce-04ec-4c7a-a9ce-441576434b98">
