@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './ClassCard.css';
 import Popup from 'reactjs-popup';
 import books from "../image/original.avif";
-function ClassCard({name, description, about, requirements, schedule}) {
+function ClassCard({name, description, about, requirements, schedule, img}) {
 
 return ( 
   <div style={{ 

@@ -27,7 +27,7 @@ const Course = () => {
     id: 3,
       name: 'Information Technology',
       description: 'Career Pathway Industry Recognized Credentials/ First Job',
-      about: 'Certifications in \\nCompTIA A+ or Google IT Support Professional \\n Facebook Social Media Marketing Professional Certification',
+      about: 'Certifications in CompTIA A+ or Google IT Support Professional',
       requirements: 'Requirements for the class...',
       schedule: 'Class schedule information...',
     },
@@ -69,6 +69,9 @@ These services are offered to the public at no-cost at various Goodwill Columbus
                     <ClassCard // shows a preview of class card content 
                 name={item.name}
                 description={item.description}
+                about={item.about}
+                requirements={items.requirements}
+                schedule ={items.schedule}
               />
               </CardGroup> 
               </span>  
