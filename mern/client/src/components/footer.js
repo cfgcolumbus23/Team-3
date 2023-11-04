@@ -2,34 +2,50 @@ import React, { useEffect, useState } from 'react';
 import smile from '../smile.svg';
 import neutral from '../neutral.svg';
 import frown from '../frown.svg';
+import { useLocation } from 'react-router-dom';
 
 
 
 
 const Footer = () => {
-  const [metrics, setMetrics] = useState([]);
+  const location = useLocation()
+  const [ratings, setRatings] = useState(null)
   useEffect(() => {
-    async function getMetrics() {
-      const response = await fetch('http://localhost:3001/record/')
-      if (!response.ok) {
-        const message = `An error occurred: ${response.statusText}`;
-        window.alert(message);
-        return;
+    const fetchRatings = async() => {
+      const pathOfPage = location.pathname;
+      console.log(pathOfPage)
+      const response = await fetch('/api/ratings/getRatings?page=' + pathOfPage)
+      const json = await response.json()
+
+      if (response.ok){
+        console.log("YAY")
+        console.log(json)
+        setRatings(json)
       }
-      const metrics = await response.json();
-      console.log(metrics);
-      setMetrics(metrics);
     }
-    getMetrics();
-    return;
-  }, [metrics.length]);
+    fetchRatings()
+  }, [])
   return (
     <footer>
-      <img src={smile} alt = "smile" onClick={() =>
-        console.log(metrics)
-      }/>
-      <img src={neutral} alt = "neutral"  />
-      <img src={frown} alt = "frown" />
+      <div>
+        <img src={smile} alt = "smile" onClick={() =>
+        console.log("HI")
+        }/>
+        
+        {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}
+
+        
+      </div>
+      <div>
+        <img src={neutral} alt = "neutral"  />
+        {ratings && ratings.numNeutral && <p>{ratings.numNeutral}</p>}
+
+      </div>
+      <div>
+        <img src={frown} alt = "frown" />
+        {ratings && ratings.numFrown && <p>{ratings.numFrown}</p>}
+
+      </div>
       
     </footer>
   );
