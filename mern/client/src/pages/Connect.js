@@ -1,12 +1,8 @@
-//import React from "react";
 import "./Connect.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
-
-//import { MainContainer, , MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
@@ -20,13 +16,10 @@ export default function ChatbotComponent() {
     const [userMessage, setUserMessage] = useState(""); // ""
     const [isLoading, setIsLoading] = useState(false);
     const handleInputSubmit = async (innerHtml, textContent, innerText, nodes) => {
-    // if (handleInputSubmit) return;
-
     setIsLoading(true);
 
     try {
       // Make a request to the OpenAI GPT-3 API
-
       const response = await openai.chat.completions.create({
         messages: [{ role: 'user', content: 'Say this is a test' }],
         model: 'gpt-3.5-turbo',
@@ -40,12 +33,13 @@ export default function ChatbotComponent() {
     }
 
     setIsLoading(false);
-    setUserMessage(""); // Clear the input field
+    //Clear the input field
+    setUserMessage("");
   };
 
 
   return (
-    <div id="largeBoc" className= "overallContainer">
+    <div id="largeBox" className= "overallContainer"> //Container Style Overall
     <div id="container" className="containerBox chatBotBox">
         <header className="Top">
             <div className="containerHeader">
@@ -54,6 +48,7 @@ export default function ChatbotComponent() {
                 </h1>
             </div>
         </header>   
+    //Middle Section of Chatbot
         <main className="Main">
             <div className="mainTop"></div>
             <div className="Message">
@@ -69,6 +64,7 @@ export default function ChatbotComponent() {
                 </div>
                 </section>
             </div>
+            //Create the buttons, link to page needed
             <div className="ChatBot Options chatBotOptions">
                 <div className="Buttons">
                 <Link to="/Courses">
@@ -122,6 +118,7 @@ export default function ChatbotComponent() {
         </ChatContainer>
         </MainContainer>
         </footer>  
+        //Implement in future, allow user to submit feedback
         <div className="Feedback Button">
             <button className="Feedback">
                 Feedback
