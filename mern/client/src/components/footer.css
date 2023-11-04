@@ -1,0 +1,8 @@
+.emojis{
+    display: flex
+}
+
+#footer {
+    height: 80px;
+    width: 80px;
+}

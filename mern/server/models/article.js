@@ -19,6 +19,14 @@ const articleSchema = new Schema({
         type: String,
         required: true
     },
+    imageURL: {
+        type: String,
+        required: false
+    },
+    imageCaption: {
+        type: String,
+        required: false
+    }
     
 }, { timestamps: true })
 
