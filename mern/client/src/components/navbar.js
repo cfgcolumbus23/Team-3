@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-
+import { useLogout } from '../hooks/useLogout'
 
 const pages = ['Resources', 'Courses', 'Mentorship', 'Connect', 'Login', 'Signup'];
 const settings = ['Profile', 'Account', 'Logout'];
@@ -36,7 +36,10 @@ function ResponsiveNavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
+  const { logout } = useLogout()
+  const handleClick = () => {
+    logout()
+  }
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -136,6 +139,9 @@ function ResponsiveNavBar() {
                 </MenuItem>
               ))}
             </Menu>
+            <div>
+              <button onClick={handleClick}>Log Out</button>
+            </div>
           </Box>
         </Toolbar>
       </Container>
