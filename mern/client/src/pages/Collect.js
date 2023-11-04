@@ -11,7 +11,6 @@ const openai = new OpenAI({
   apiKey: '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', // defaults to process.env["OPENAI_API_KEY"]
   dangerouslyAllowBrowser: true 
 });
-
 export default function ChatbotComponent() {
 
     const [messages, setMessages] = useState([]);
