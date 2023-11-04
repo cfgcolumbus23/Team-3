@@ -59,7 +59,6 @@ export default function Home() {
             </CardText>
             <Button color="primary"> Resources  </Button>
           </CardBody>
-          
         </Card>
         <Card className="my-2">
           <img src={resource} width={250} height={250} />
