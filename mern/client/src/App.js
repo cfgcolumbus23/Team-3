@@ -3,8 +3,8 @@ import Header from './components/Header.js'
 import Footer from './components/footer';
 import Home from "./pages/Home";
 import Courses from "./pages/Course"
-//import Resources from "./pages/Mentorship.js"
-import Mentorship from "./pages/Mentorship.js"
+import Resources from "./pages/mentorship.js"
+import Mentorship from "./pages/mentorship.js"
 import Login from "./pages/Login"
 import Signup from './pages/Signup';
 
