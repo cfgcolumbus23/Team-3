@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 //Images
 import resource from "../image/Job-Training.jpg"
+import education from "../image/education.jpg"
 import mentorship from "../image/mentorship.jpg"
 import connection from "../image/connection.jpeg"
 
@@ -69,7 +70,7 @@ export default function Home() {
           </CardBody>
         </Card>
         <Card>
-          <img src={mentorship} width={275} />
+          <img src={education} width={350} />
         </Card>
       </CardGroup>
 
@@ -101,8 +102,8 @@ export default function Home() {
             <CardText>
             Goodwill is more than an organization; it's a vibrant community where individuals from all walks of life come together to support each other. Here, you can connect with peers, potential employers, and community leaders who share your commitment to growth and success. 
             </CardText>
-              <Link to="/Connection">
-                <Button color="primary"> Connection  </Button>
+              <Link to="/connect">
+                <Button color="primary"> Connect  </Button>
               </Link>
           </CardBody>
         </Card>
