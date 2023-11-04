@@ -6,6 +6,7 @@ const getArticleRoutes = require('./routes/articles')
 const userRoutes = require('./routes/user')
 const phoneRoutes = require('./routes/phone')
 const commentRoutes = require('./routes/comments')
+const eventRoutes = require('./routes/events')
 const mongoose = require('mongoose')
 //express app
 const app = express()
@@ -30,7 +31,7 @@ app.use('/api/articles', getArticleRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/phone', phoneRoutes)
 app.use('/api/comments', commentRoutes)
-
+app.use('/api/events', eventRoutes)
 
 // connect to db
 mongoose.connect(process.env.ATLAS_URI).then(() => {

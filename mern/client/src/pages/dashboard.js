@@ -48,6 +48,20 @@ const Dashboard = () => {
           fetchComments(); // Fetch ratings data initially
         }, []);
         console.log(comments)
+        const [calendarEvent, setCalendarEvent] = useState(null)
+        const [calendarEventDate, setCalendarEventDate] = useState(null)
+
+        const handleCalendarSubmit = async() => {
+
+            const ret = await fetch('/api/events/addEvent?event=' + calendarEvent + "&date=" + calendarEventDate);
+            
+            console.log(ret)
+        }
+        console.log('/api/events/addEvent?event=' + calendarEvent + "&date=" + calendarEventDate)
+        console.log(calendarEvent)
+        console.log(calendarEvent)
+        console.log(calendarEvent)
+        console.log(calendarEventDate)
     return (
         <div>
         <br></br>
@@ -56,6 +70,15 @@ const Dashboard = () => {
             <h4>Send SMS to Users!</h4>
             <label>Message:</label>
             <input type = "text" onChange={(e) => setMessage(e.target.value)}/>
+            
+            <button>Submit</button>
+        </form>
+        <form className = "addCalendarEvent" onSubmit={handleCalendarSubmit}>
+            <h4>Add Events to the Calendar!</h4>
+            <label>Event Name</label>
+            <input type = "text" onChange={(e) => setCalendarEvent(e.target.value)}/>
+            <label>Date</label>
+            <input type = "datetime-local" onChange={(e) => setCalendarEventDate(e.target.value)}/>
             
             <button>Submit</button>
         </form>
