@@ -34,15 +34,15 @@ const Footer = () => {
     <footer className="App-footer">
       <div className="emojis">
       <div>
-        <img src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
+        <img id="footer" src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
         {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}
       </div>
       <div>
-        <img src={neutral} alt="neutral" onClick={() => handleClick('numNeutral')} />
+        <img id="footer" src={neutral} alt="neutral" onClick={() => handleClick('numNeutral')} />
         {ratings && ratings.numNeutral && <p>{ratings.numNeutral}</p>}
       </div>
       <div>
-        <img src={frown} alt="frown" onClick={() => handleClick('numFrown')} />
+        <img id="footer" src={frown} alt="frown" onClick={() => handleClick('numFrown')} />
         {ratings && ratings.numFrown && <p>{ratings.numFrown}</p>}
       </div>
       </div>
