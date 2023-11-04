@@ -4,6 +4,7 @@
 	font-weight: 700;
 }
 .App {
+  display: flex;
   text-align: center;
 }
 

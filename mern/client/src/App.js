@@ -3,11 +3,11 @@ import Header from './components/Header.js'
 import Footer from './components/footer';
 import Home from "./pages/Home";
 import Courses from "./pages/Course"
-import Resources from "./pages/mentorship"
-import Mentorship from "./pages/mentorship"
+import Resources from "./pages/NewsFeed.js"
+import Mentorship from "./pages/mentorship.js"
 import Login from "./pages/Login"
 import Signup from './pages/Signup';
-import NewsFeed from './pages/NewsFeed'
+import NewsFeed from './pages/NewsFeed.js'
 import Dashboard from './pages/dashboard'
 //import Mentorship from "./pages/Mentorship.js"
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
