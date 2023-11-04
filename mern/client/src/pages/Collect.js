@@ -47,7 +47,7 @@ export default function ChatbotComponent() {
         <header className="Top">
             <div className="containerHeader">
                 <h1 className="Title">
-                 Chatbot
+                 Goodwill Colombus Chatbot
                 </h1>
             </div>
         </header>   
