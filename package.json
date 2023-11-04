@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "@chatscope/chat-ui-kit-styles": "^1.4.0"
+    "@chatscope/chat-ui-kit-styles": "^1.4.0",
+    "react-big-calendar": "^1.8.5",
+    "react-type-animation": "^3.2.0",
+    "reactjs-popup": "^2.0.6"
   }
 }
