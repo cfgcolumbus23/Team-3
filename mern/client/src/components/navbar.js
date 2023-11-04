@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom";
 import { useLogout } from '../hooks/useLogout'
 
-const pages = ['Resources', 'Courses', 'Mentorship', 'Connect', 'Login', 'Signup'];
+const pages = ['resources', 'courses', 'mentorship', 'connect', 'login', 'signup'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveNavBar() {
