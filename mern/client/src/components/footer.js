@@ -28,7 +28,7 @@ const Footer = () => {
 
   useEffect(() => {
     fetchRatings(); // Fetch ratings data initially
-  }, []); // Empty dependency array to ensure it runs only once when component mounts
+  }); // Empty dependency array to ensure it runs only once when component mounts
 
   return (
     <footer className="App-footer">
