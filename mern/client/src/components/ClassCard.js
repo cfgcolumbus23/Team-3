@@ -9,9 +9,9 @@ function ClassCard({name, description, about, requirements, schedule}) {
 
 return ( 
   <div style={{ 
-      display: 'block', width: 700, padding: 30 
+      display: 'block', width: 100, padding: 30 
   }}> 
-      <Card> 
+      <Card style={{width: '18rem'}}> 
           <CardBody> 
               <CardTitle tag="h5">{name}</CardTitle> 
               <CardText >{description}</CardText> 

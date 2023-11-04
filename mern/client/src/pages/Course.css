@@ -7,3 +7,10 @@
 .horizontal-row{
     width: 50%;
 }
+.course {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: flex-start;
+    width:100%;
+}
