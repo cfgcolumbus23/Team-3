@@ -20,9 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
-      <Routes>
-      <Route exact path="/" element={<Footer />} />
-      </Routes>
+      
+      <Footer />
     </div>
   );
 }
