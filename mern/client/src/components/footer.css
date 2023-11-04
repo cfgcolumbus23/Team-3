@@ -1,0 +1,12 @@
+.emojiss{
+    display: flex
+}
+
+#footer {
+    height: 80px;
+    width: 80px;
+}
+
+p {
+    text-align: center;
+}

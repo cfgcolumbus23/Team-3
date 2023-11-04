@@ -9,3 +9,11 @@
     justify-content: center;
     text-decoration: solid;
   }
+  h5 {
+    text-align: center;
+    text-emphasis: bold;
+  }
+  .CourseCalendar{
+    justify-content: center;
+    padding: 10%;
+  }

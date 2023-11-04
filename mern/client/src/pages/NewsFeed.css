@@ -1,0 +1,8 @@
+/*Create a rectangular component with curved edges*/
+#news-feed {
+    background-color: white;
+    padding-left: 150px;
+    padding-right: 250px;
+    border-radius: 5px;
+    overflow: auto;
+}
