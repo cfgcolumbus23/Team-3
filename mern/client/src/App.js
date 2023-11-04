@@ -13,7 +13,7 @@ import Dashboard from './pages/dashboard'
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet, Link,  BrowserRouter} from "react-router-dom";
-import Collect from './pages/Collect';
+import Connect from './pages/Connect';
 import NewsArticlePage from './pages/NewsArticlePage.js';
 import ChatbotComponent from './pages/Collect';
 
