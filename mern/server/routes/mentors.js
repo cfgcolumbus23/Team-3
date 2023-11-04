@@ -10,5 +10,14 @@ router.get("/getMentors", async (req, res) => {
         res.status(400).json({error: error.message})
     }
 })
+router.post("/addMentors", async (req, res) => {
+    const {name, role, bio, imageURL} = req.body
+    try {
+        const mentor = await mentors.create({name, role, bio, imageURL})
+        res.status(200).json(mentor)
+    } catch (error){
+        res.status(400).json({error: error.message})
+    }
+})
 
 module.exports = router;

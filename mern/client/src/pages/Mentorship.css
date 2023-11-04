@@ -25,8 +25,8 @@
 
 .profile-img prof-img{
 	background: white;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 500px;
 	border-radius: 50%;
     padding: 5px;
     transform: translate(95px, 45px)
@@ -73,5 +73,9 @@ prof-img{
 .social-container {
 	display: flex;
 	border-top: solid rgb(206, 206, 206) 1px;
+	text-align: center;
+}
+
+.findMentor {
 	text-align: center;
 }
