@@ -6,29 +6,34 @@ import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
 
 //import { MainContainer, , MessageList, Message, MessageInput, TypingIndicator } from "@chatscope/chat-ui-kit-react";
-import openai from 'openai';
+import OpenAI from 'openai';
+
+const openai = new OpenAI({
+  apiKey: 'My API Key', // defaults to process.env["OPENAI_API_KEY"]
+  dangerouslyAllowBrowser: true 
+});
 
 export default function ChatbotComponent() {
 
     const [messages, setMessages] = useState([]);
-    const [userMessage, setUserMessage] = useState("");
+    const [userMessage, setUserMessage] = useState(""); // ""
     const [isLoading, setIsLoading] = useState(false);
-    const handleInputSubmit = async () => {
-    if (!userMessage) return;
+    const handleInputSubmit = async (innerHtml, textContent, innerText, nodes) => {
+    // if (handleInputSubmit) return;
 
     setIsLoading(true);
 
     try {
       // Make a request to the OpenAI GPT-3 API
-      const response = await openai.create({
-        engine: 'davinci',
-        prompt: userMessage,
-        max_tokens: 150,
+
+      const response = await openai.chat.completions.create({
+        messages: [{ role: 'user', content: 'Say this is a test' }],
+        model: 'gpt-3.5-turbo',
       });
     
       const botResponse = response.data.choices[0].text;
 
-      setMessages([...messages, { text: userMessage, type: "user" }, { text: botResponse, type: "bot" }]);
+      setMessages([...messages, { text: textContent, type: "user" }, { text: botResponse, type: "bot" }]);
     } catch (error) {
       console.error("Error sending message to OpenAI GPT-3:", error);
     }
@@ -99,7 +104,6 @@ export default function ChatbotComponent() {
             {isLoading && <TypingIndicator content="AI is typing..." />}
           </MessageList>
           {<MessageInput
-            value={userMessage}
             onSend={handleInputSubmit}
             placeholder="Type your question here..."
               />}
