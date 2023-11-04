@@ -1,5 +1,7 @@
 import './App.css';
-import ResponsiveNavBar from "./common/navbar.js";
+import ResponsiveNavBar from "./component/navbar.js";
+import Home from "./pages/Home.js"
+import Mentorship from "./pages/mentorship.js"
 let {BrowserRouter,Switch,Route,NavLink} = ReactRouterDOM;
 
 function App() {
@@ -10,10 +12,10 @@ function App() {
         <div className="pages">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/resources" component={Resources} />
-            <Route path="/courses" component={Courses} />
+            {/* {/* <Route path="/resources" component={Resources} />
+            <Route path="/courses" component={Courses} /> */}
             <Route path="/mentorship" component={Mentorship} />
-            <Route path="/connect" component={Connect} />
+            {/* <Route path="/connect" component={Connect} /> */} */
           </Switch>
         </div>
       </BrowserRouter>
