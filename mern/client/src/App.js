@@ -6,7 +6,7 @@ import Home from "./pages/Home.js"
 //import { BrowserRouter,Switch,Route, Routes, Outlet, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet, Link,  BrowserRouter} from "react-router-dom";
-import ChatbotComponent from './Chatbox/chatbotComponent';
+import Collect from './pages/Collect';
 
 function App() {
   return (
@@ -27,8 +27,8 @@ function App() {
           </div> */}
           <div>
             <Header />
-            <Home />
-            <ChatbotComponent />
+            {/* <Home /> */}
+            <Collect />
             <Footer />
           </div>
     </>
