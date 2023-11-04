@@ -1,12 +1,11 @@
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { useState } from 'react';
 import ClassCard from '../components/ClassCard'; // Import the ClassCard component
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Calender from '../components/Calendar';
-
 import React from 'react';
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import { CardGroup } from 'reactstrap';
 
 const Course = () => {
   const [selectedId, setSelectedId] = useState('');
@@ -22,7 +21,7 @@ const Course = () => {
     {
     id: 2,
       name: 'Digital Literacy',
-      description: 'Industry Recognized Credentials Microsoft Office Suite (Word, Excel, etc.)',
+      description: 'Class Format',
       about: 'About the class content...',
       requirements: 'Requirements for the class...',
       schedule: 'Class schedule information...',
@@ -30,7 +29,7 @@ const Course = () => {
     {
     id: 3,
       name: 'Information Technology',
-      description: 'Industry Recognized Credentials Microsoft Office Suite (Word, Excel, etc.)',
+      description: 'Career Pathway Industry Recognized Credentials/ First Job',
       about: 'About the class content...',
       requirements: 'Requirements for the class...',
       schedule: 'Class schedule information...',
@@ -40,22 +39,22 @@ const Course = () => {
   return (
     <div class= "course">
       <h1>Courses</h1>
-      <div className="bg-purple-600 flex items-center justify-center h-screen">
-        <div className="horizontal-row">
+      <p>From 1-on-1 career coaching to job credentials to digital literacy, our free job training programs are open to all.
+These services are offered to the public at no-cost at various Goodwill Columbus job training centers and are focused on preparing individuals for in-demand jobs in the information technology, healthcare, hospitality, and logistics industries.</p>
+      
+        
           {items.map((item) => {
-             return <div>
-              <ClassCard // Use the ClassCard component
+             return <div className = "horizontal-row">
+                <CardGroup>
+                    <ClassCard // shows a preview of class card content 
                 name={item.name}
                 description={item.description}
               />
+              </CardGroup>
             </div>
             
 })}
 
-        </div>
-
-      
-      </div>
       <Calender />
     </div>
   );
