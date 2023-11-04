@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+#header-container ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#header-container ul li{
+  float: left;
+  padding: 0 10px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -20,8 +31,20 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #0f5b97c4;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-footer {
+  background-color: #0f5b97c4;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;

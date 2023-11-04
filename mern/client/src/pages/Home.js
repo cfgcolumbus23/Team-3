@@ -13,38 +13,6 @@ import resource from "../image/Job-Training.jpg"
 import mentorship from "../image/mentorship.jpg"
 import connection from "../image/connection.jpeg"
 
-
-function SimpleContainer() {
-  return (
-    <div>
-      {/* Ayushe Type Here! Put your "I am" here*/}
-      <h1>I am</h1>
-      <React.Fragment>
-        <CssBaseline />
-        <Container maxWidth="false">
-          <Box sx={{ bgcolor: '#cfe8fc', height: '40vh' }}>
-              <div>
-                <Box sx={{display: 'flex'}}>
-                    Find Your Resources
-                </Box>
-              </div>
-              <Box sx={{display: 'flex'}}>
-                  We believe that everyone has the right to access the tools they need to succeed. Whether you're searching for career development workshops, educational materials, financial literacy guidance, or practical support like transportation and clothing for interviews, we've got you covered. 
-              </Box>
-              <Box sx={{display: 'flex'}}>
-                  <Button variant="contained">Resources</Button>
-              </Box>
-              <Box sx={{display: 'flex'}}>
-                  <img src={resource} width={250} height={250} />
-              </Box>
-          </Box>
-        </Container>
-      </React.Fragment>
-    </div>
-  );
-}
-
-
 export default function Home() {
   return (
     <div className="home">
