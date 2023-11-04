@@ -1,18 +1,25 @@
 import { 
   Card, CardBody, CardImg, 
-  CardTitle, CardText, Button, CardSubtitle
+  CardTitle, CardText, Button
 } from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import './ClassCard.css';
 import Popup from 'reactjs-popup';
+import books from "../image/original.avif";
 function ClassCard({name, description, about, requirements, schedule}) {
 
 return ( 
   <div style={{ 
       display: 'block', width: 100, padding: 30 
   }}> 
-      <Card style={{width: '18rem'}}> 
+      <Card style={{width: '20rem'}}> 
+      <img
+        src= {books}
+        width={250}
+        height={250}
+  />
           <CardBody> 
+        
               <CardTitle tag="h5">{name}</CardTitle> 
               <CardText >{description}</CardText> 
               <CardText> {about} </CardText> 
