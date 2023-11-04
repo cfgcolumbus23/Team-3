@@ -1,6 +1,4 @@
-import Header from './page/Header'
-import Content from './page/Content'
-import Footer from './page/Footer'
+import Home from './pages/Home'
 
 //import logo from './logo.svg';
 import './App.css';
@@ -8,9 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Content />
-      <Footer />
+      <Home/>
      
     </div>
   );
