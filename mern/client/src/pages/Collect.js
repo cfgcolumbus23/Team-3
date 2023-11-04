@@ -119,3 +119,4 @@ export default function ChatbotComponent() {
     </div>
   );
 }
+

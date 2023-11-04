@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Outlet, Link,  BrowserRouter} from "react-router-dom";
 import Collect from './pages/Collect';
 import NewsArticlePage from './pages/NewsArticlePage.js';
+import ChatbotComponent from './pages/Collect';
 
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -34,6 +35,7 @@ function App() {
                   <Route path = "/dashboard" element = {<Dashboard />}/>
                   <Route path = "/more" element = {<NewsArticlePage/>}exact/>
                   <Route path = "/newsfeed" element = {<NewsFeed/>} />
+                  <Route path = "/connect" element = {<ChatbotComponent/>} />
                 </Routes>
               </div>
             <Footer />
