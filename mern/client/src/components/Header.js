@@ -1,4 +1,4 @@
-import ResponsiveNavBar from '../common/navbar'
+import ResponsiveNavBar from './navbar'
 
 import { NavLink } from 'react-router-dom';
 
