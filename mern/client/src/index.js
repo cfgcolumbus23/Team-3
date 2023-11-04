@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import Course from "./pages/Course";
-import Mentorship from "./pages/mentorship";
+import Mentorship from "./pages/Mentorship";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 

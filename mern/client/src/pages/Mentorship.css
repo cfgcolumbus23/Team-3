@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 92%;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  background: #1A2980;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #26D0CE, #1A2980); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+p {
+  font-size: 75%;
+}
+
+h2, h3, h4, h5 {
+  margin: 0 0 3px;
+}
+
+
+.Search {
+  margin: 20px auto;
+  width: 300px;
+}
+
+.Search-box {
+  font-size: 1.4rem;
+  border: none;
+  border-bottom: 1px solid lime;
+  background: inherit;
+  outline: none;
+  padding: 5px;
+  color: white;
+}
+
+.Search-box::placeholder {
+  color: lightgrey;
+}
+
+.listOfCards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.UserCard {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px black;
+  margin: 10px;
+  background: #0c2b5e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0c2b5e, #173c77);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #0c2b5e, #173c77); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.UserCard img {
+  width: 120px;
+  height: 120px;
+  margin: 8px 0 0 0;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+.UserCardTop {
+  height: 52%;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.UserCardBottom {
+  
+  min-height: 40%;
+  overflow: auto;
+  min-width: 100%;
+  max-width: 100%;
+  padding: 0 10px 5px;
+  overflow-wrap: break-word;
+}
+
+.UserCardBottom::-webkit-scrollbar {width: 3px; height:1px;transition:all .5s;z-index:10;}
+.UserCardBottom::-webkit-scrollbar-track {background-color: #0c2b5e;}
+.UserCardBottom::-webkit-scrollbar-thumb {
+  background-color: #bec4c8; 
+  border-radius:3px;
+}
+
+.NewUserButton {
+  background: #FF512F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  height: 250px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  margin: auto 10px;
+  box-shadow: 15px 15px 40px black;
+  outline: none;
+  font-family: inherit;
+}
+
+.NewUserButton:hover {
+  background: #FF512A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DD2476, #FFA000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DD2476, #FFA000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transform: scale(1.02);
+  box-shadow: 20px 20px 50px black;
+}

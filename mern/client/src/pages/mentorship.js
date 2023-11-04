@@ -1,4 +1,4 @@
-
+// Using the Random User API: https://randomuser.me/api/
 
 
 class Search extends React.Component {
@@ -163,7 +163,3 @@ class Search extends React.Component {
   
   
   ReactDOM.render(<App />, document.querySelector('#root'));
-
-
-
- export default Mentorship;
