@@ -1,5 +1,7 @@
 import './App.css';
+<<<<<<< HEAD
 import Header from './pages/Header.js'
+import Footer from './components/footer';
 import Footer from './pages/Footer.js'
 import Home from "./pages/Home.js"
 import Mentorship from "./pages/Mentorship.js"
@@ -22,11 +24,27 @@ function App() {
             <Route path="/connect" element={<Mentorship/>} />
           </Routes>
           </div>
-          <Footer />
           </BrowserRouter>
+          </div>
+          <div>
+            <Header />
+            <Home />
+            <Footer />
+          </div>
 
-        </div>
     </>
+=======
+import Footer from './components/footer';
+import { Route, Routes } from "react-router-dom";
+import ResponsiveNavBar from "./common/navbar.js";
+
+function App() {
+  return (
+    <div>
+      <ResponsiveNavBar />
+      <Footer />
+    </div>
+>>>>>>> main
   );
 }
 
