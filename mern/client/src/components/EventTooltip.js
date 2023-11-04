@@ -11,8 +11,7 @@ const EventTooltip = ({ event, onClose }) => {
       <p>{event.location}</p>
     
       <iframe
-        src={event.mapURL} // Add a mapUrl property to your event data
-        width="400"
+        src={event.mapURL} // Add a mapUrl
         height="300"
         style={{ border: 0 }}
         allowFullScreen
