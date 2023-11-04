@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 //Images
 import resource from "../image/Job-Training.jpg"
+import education from "../image/education.jpg"
 import mentorship from "../image/mentorship.jpg"
 import connection from "../image/connection.jpeg"
 
@@ -69,7 +70,7 @@ export default function Home() {
           </CardBody>
         </Card>
         <Card>
-          <img src={mentorship} width={275} />
+          <img src={education} width={350} />
         </Card>
       </CardGroup>
 
