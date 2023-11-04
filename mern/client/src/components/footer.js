@@ -3,7 +3,10 @@ import smile from '../smile.svg';
 import neutral from '../neutral.svg';
 import frown from '../frown.svg';
 import { useLocation } from 'react-router-dom';
+import "./footer.css";
 
+
+// className="App-footer"
 const Footer = () => {
   const location = useLocation();
   const [ratings, setRatings] = useState(null);
@@ -28,18 +31,20 @@ const Footer = () => {
   }, []); // Empty dependency array to ensure it runs only once when component mounts
 
   return (
-    <footer>
+    <footer className="App-footer">
+      <div className="emojis">
       <div>
-        <img src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
+        <img id="footer" src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
         {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}
       </div>
       <div>
-        <img src={neutral} alt="neutral" onClick={() => handleClick('numNeutral')} />
+        <img id="footer" src={neutral} alt="neutral" onClick={() => handleClick('numNeutral')} />
         {ratings && ratings.numNeutral && <p>{ratings.numNeutral}</p>}
       </div>
       <div>
-        <img src={frown} alt="frown" onClick={() => handleClick('numFrown')} />
+        <img id="footer" src={frown} alt="frown" onClick={() => handleClick('numFrown')} />
         {ratings && ratings.numFrown && <p>{ratings.numFrown}</p>}
+      </div>
       </div>
     </footer>
   );
