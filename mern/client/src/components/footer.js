@@ -4,50 +4,43 @@ import neutral from '../neutral.svg';
 import frown from '../frown.svg';
 import { useLocation } from 'react-router-dom';
 
-
-
-
 const Footer = () => {
-  const location = useLocation()
-  const [ratings, setRatings] = useState(null)
-  useEffect(() => {
-    const fetchRatings = async() => {
-      const pathOfPage = location.pathname;
-      console.log(pathOfPage)
-      const response = await fetch('/api/ratings/getRatings?page=' + pathOfPage)
-      const json = await response.json()
+  const location = useLocation();
+  const [ratings, setRatings] = useState(null);
 
-      if (response.ok){
-        console.log("YAY")
-        console.log(json)
-        setRatings(json)
-      }
+  const handleClick = async (emotion) => {
+    await fetch('api/ratings/updateRatings?' + 'page=' + location.pathname + '&emotion=' + emotion);
+    fetchRatings(); // Refetch ratings data after each click
+  };
+
+  const fetchRatings = async () => {
+    const pathOfPage = location.pathname;
+    const response = await fetch('/api/ratings/getRatings?page=' + pathOfPage);
+    const json = await response.json();
+
+    if (response.ok) {
+      setRatings(json);
     }
-    fetchRatings()
-  }, [])
+  };
+
+  useEffect(() => {
+    fetchRatings(); // Fetch ratings data initially
+  }, []); // Empty dependency array to ensure it runs only once when component mounts
+
   return (
     <footer>
       <div>
-        <img src={smile} alt = "smile" onClick={() =>
-        console.log("HI")
-        
-        }/>
-        
+        <img src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
         {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}
-
-        
       </div>
       <div>
-        <img src={neutral} alt = "neutral"  />
+        <img src={neutral} alt="neutral" onClick={() => handleClick('numNeutral')} />
         {ratings && ratings.numNeutral && <p>{ratings.numNeutral}</p>}
-
       </div>
       <div>
-        <img src={frown} alt = "frown" />
+        <img src={frown} alt="frown" onClick={() => handleClick('numFrown')} />
         {ratings && ratings.numFrown && <p>{ratings.numFrown}</p>}
-
       </div>
-      
     </footer>
   );
 };
