@@ -13,7 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Resources', 'Mentorship', 'Connect'];
+
+const pages = ['Resources', 'Courses', 'Mentorship', 'Connect', 'Login', 'Signup'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveNavBar() {
