@@ -5,6 +5,7 @@ const getRatingsRoutes = require('./routes/getRatings')
 const getArticleRoutes = require('./routes/articles')
 const userRoutes = require('./routes/user')
 const phoneRoutes = require('./routes/phone')
+const commentRoutes = require('./routes/comments')
 const mongoose = require('mongoose')
 //express app
 const app = express()
@@ -27,6 +28,7 @@ app.use('/api/ratings', getRatingsRoutes)
 app.use('/api/articles', getArticleRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/phone', phoneRoutes)
+app.use('/api/comments', commentRoutes)
 
 
 // connect to db
