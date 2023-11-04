@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import smile from '../smile.svg';
 import neutral from '../neutral.svg';
 import frown from '../frown.svg';
