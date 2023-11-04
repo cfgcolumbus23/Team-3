@@ -10,7 +10,7 @@ function ClassCard({name, description, about, requirements, schedule}) {
 
 return ( 
   <div style={{ 
-      display: 'block', width: 100, padding: 30 
+      display: 'block', padding: 30, justifyContent: 'center'
   }}> 
       <Card style={{width: '20rem'}}> 
       <img
@@ -25,7 +25,7 @@ return (
               <CardText> {about} </CardText> 
               <CardText> {requirements} </CardText> 
               <CardText> {schedule} </CardText> 
-              <Popup trigger={<Button className="custom-btn" >Learn More!</Button> } modal nested>  
+              <Popup trigger={<Button className="custom-btn" >Class Information!</Button> } modal nested>  
               {close => <span> <Button onClick={close}>close</Button> <div className="header"><h3>{name}</h3></div><div className="content"><h5>{description}</h5></div> <p>{about}</p> <p>{requirements}</p> <p>{schedule}</p>
                 </span>}
               </Popup>

@@ -38,22 +38,23 @@ const Course = () => {
       <h1>Courses</h1>
       <p>From 1-on-1 career coaching to job credentials to digital literacy, our free job training programs are open to all.
 These services are offered to the public at no-cost at various Goodwill Columbus job training centers and are focused on preparing individuals for in-demand jobs in the information technology, healthcare, hospitality, and logistics industries.</p>
-     <CardGroup>
-     < ClassCard name="Basic Work Readiness" />
-     < ClassCard name="'Digital Literacy" description="Class Format" about="About the class content..." requirements= "Requirements for the class..." schedule= "Class schedule information..."/>
-     </CardGroup>
 
+        <div className = "card-body">
           {items.map((item) => {
-              return <div className = "horizontal-row">
-                 <CardGroup>
+              return <td className = "horizontal-row"> <span>
+                 <CardGroup > 
                     <ClassCard // shows a preview of class card content 
                 name={item.name}
                 description={item.description}
               />
               </CardGroup> 
-             </div> 
+              </span>  
+             </td> 
+        })}
+        </div>
+        <tr>    
+        </tr>
             
-})}
 
       <CourseCalender />
     </div>
