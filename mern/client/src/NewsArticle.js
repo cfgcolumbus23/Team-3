@@ -14,7 +14,7 @@ function NewsArticle() {
 
         // Function that gets the news articles
         const fetchWorkouts = async () => {
-            const response = await fetch('http://localhost:4000/api/news');
+            const response = await fetch('/api/articles/getArticles');
             const json = await response.json();
 
             // Checks if the news articles is ok
