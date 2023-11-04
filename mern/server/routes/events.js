@@ -15,4 +15,14 @@ router.get("/addEvent", async (req, res) => {
     }
 })
 
+router.get("/getEvents", async (req, res) => {
+  
+    try {
+        const event = await events.find().exec()
+        res.status(200).json(event)
+    } catch (error){
+        res.status(400).json({error: error.message})
+    }
+})
+
 module.exports = router;
