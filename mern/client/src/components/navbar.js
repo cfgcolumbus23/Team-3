@@ -12,9 +12,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 
-const pages = ['Resources', 'Courses', 'Mentorship', 'Connect', 'Login', 'Signup'];
+const pages = ['Resources', 'Courses', 'Mentorship', 'Connect'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveNavBar() {
@@ -41,7 +42,6 @@ function ResponsiveNavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <div><img className="logo" alt="Goodwill Logo" src="https://www.goodwillcolumbus.org/wp-content/uploads/2022/05/GWC_Logo_White.svg"/></div>
-          
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
