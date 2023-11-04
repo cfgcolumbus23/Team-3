@@ -1,0 +1,12 @@
+.comment {
+    width: 50%; /* Set the width to cover 50% of the parent container */
+    border: 1px solid #ccc; /* Border color and thickness */
+    margin-bottom: 10px; /* Spacing between comments */
+    padding: 10px; /* Padding inside each comment */
+  }
+  
+  .comment h4,
+  .comment h7,
+  .comment h8 {
+    margin: 0; /* Remove default margins for heading elements */
+  }

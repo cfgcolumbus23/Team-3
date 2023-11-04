@@ -32,7 +32,7 @@ const Footer = () => {
 
   return (
     <footer className="App-footer">
-      <div className="emojis">
+      <div className="emojiss">
       <div>
         <img id="footer" src={smile} alt="smile" onClick={() => handleClick('numSmile')} />
         {ratings && ratings.numSmile && <p>{ratings.numSmile}</p>}

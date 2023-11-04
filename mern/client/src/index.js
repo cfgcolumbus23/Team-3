@@ -12,15 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <AuthContextProvider>
       <BrowserRouter>
-        <Routes>
-          <Route path = "/" element = {<App />}/>
-          <Route path = "/Resources" element = {<NewsFeed />} />
-          <Route path = "/Courses" element = {<Course />} />
-          
-          <Route path = "/Mentorship" element = {<Mentorship />} />
-          <Route path = "/Connection" />
-          
-        </Routes>
+        <App />
       </BrowserRouter>  
     </AuthContextProvider>
   </React.StrictMode>,
