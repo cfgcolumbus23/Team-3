@@ -22,6 +22,10 @@ const articleSchema = new Schema({
     imageURL: {
         type: String,
         required: false
+    },
+    imageCaption: {
+        type: String,
+        required: false
     }
     
 }, { timestamps: true })
