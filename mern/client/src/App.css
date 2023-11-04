@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Centra;
+	src: url('./assets/Now-Regular.otf');
+	font-weight: 700;
+}
 .App {
   text-align: center;
 }
@@ -41,4 +46,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body{
+  font-family: 'Centra', sans-serif !important;
 }
