@@ -8,7 +8,7 @@ import { MainContainer, ChatContainer, MessageList, Message, MessageInput, Typin
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-  apiKey: '***REMOVED***', // defaults to process.env["OPENAI_API_KEY"]
+  apiKey: '', // defaults to process.env["OPENAI_API_KEY"]
   dangerouslyAllowBrowser: true 
 });
 export default function ChatbotComponent() {
